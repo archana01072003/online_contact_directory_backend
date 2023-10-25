@@ -49,4 +49,10 @@ public class UserController {
        return userService.getAllContact(userId);
     }
 
+    @GetMapping("/server-check")
+    public ResponseEntity<?> testMethod()
+    {
+        return ResponseEntity.ok("Server Is Up");
+    }
+
 }
