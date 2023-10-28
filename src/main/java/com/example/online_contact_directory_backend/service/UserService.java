@@ -14,4 +14,10 @@ public interface UserService {
     void saveContact(ContactDto contactDto, int userId);
 
     List<ContactDto> getAllContact(int userId);
+
+    void deleteContact(int contactId);
+
+    void deleteContactBySpecificFields(String contactName, String contactNumber);
+
+    void deleteContactUsingObj(ContactDto contactDto);
 }

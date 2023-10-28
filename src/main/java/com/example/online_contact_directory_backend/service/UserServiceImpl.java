@@ -57,4 +57,17 @@ public class UserServiceImpl implements UserService {
         }
         return contactDtoList;
     }
+    public void deleteContact(int contactId)
+    {
+         contactRepository.deleteById(contactId);
+    }
+    public void deleteContactBySpecificFields(String contactName, String contactNumber)
+    {
+        contactRepository.deleteBySpecificFields(contactName,contactNumber);
+    }
+    public void deleteContactUsingObj(ContactDto contactDto)
+    {
+
+        contactRepository.deleteContactUsingObj(contactDto.getContactName(),contactDto.getContactNumber());
+    }
 }
